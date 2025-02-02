@@ -1,7 +1,11 @@
-  <main class="main">
-    <section class="post-list">
-      <<!-- post card -->>
-    </section>
+<main class="main">
+  <app-post-form (submitForm)="addPost($event)" />
 
-    <app-post-form />
-  </main>
+  <section class="post-list">
+    @for (post of posts(); track post.title) {
+    <app-post-card [post]="post" />
+    } @empty {
+    <p>Você não possui Posts salvos.</p>
+    }
+  </section>
+</main>
