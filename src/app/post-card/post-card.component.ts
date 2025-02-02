@@ -3,9 +3,10 @@ import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-post-card',
-  imports: [],
   templateUrl: './post-card.component.html',
-  styleUrl: './post-card.component.scss'
+  styleUrls: ['./post-card.component.scss'],
+  standalone: true,
+  imports: [],
 })
 export class PostCardComponent {
   readonly post = input.required<Post>();
