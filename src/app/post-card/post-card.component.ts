@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-post-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './post-card.component.scss'
 })
 export class PostCardComponent {
-
+  readonly post = input.required<Post>();
 }
