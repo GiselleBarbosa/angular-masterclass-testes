@@ -15,7 +15,7 @@ import { Post } from '../models/post.model';
   imports: [ReactiveFormsModule],
 })
 export class PostFormComponent {
-  submitForm = output<Post>();
+  @Output() submitForm = new EventEmitter<Post>();
 
   form = new FormGroup({
     title: new FormControl('', {
@@ -29,6 +29,8 @@ export class PostFormComponent {
   });
 
   onSubmit() {
-    this.submitForm.emit(this.form.getRawValue());
+    const dataForm = this.form.getRawValue();
+    this.submitForm.emit(dataForm);
+    this.form.reset();
   }
 }
