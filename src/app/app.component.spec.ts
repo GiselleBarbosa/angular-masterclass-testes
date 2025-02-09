@@ -16,7 +16,7 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
-    expect(component).not.toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it('Deve adicionar um novo post a lista', () => {
