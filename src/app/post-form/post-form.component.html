@@ -1,14 +1,14 @@
 <section class="form-container">
-  <h1>Create a New Post</h1>
+  <h1>Criar uma nova postagem</h1>
   <form id="postForm" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title" formControlName="title" placeholder="Enter post title" />
+      <label for="title">Titulo</label>
+      <input type="text" id="title" name="title" formControlName="title" placeholder="Digite o titulo da postagem" />
     </div>
     <div class="form-group">
-      <label for="body">Body</label>
-      <textarea id="body" name="body" rows="5" placeholder="Write your post content here..." formControlName="body"></textarea>
+      <label for="body">Corpo</label>
+      <textarea id="body" name="body" rows="5" placeholder="Escreva o corpo da postagem aqui ..." formControlName="body"></textarea>
     </div>
-    <button type="submit" class="btn">Create Post</button>
+    <button type="submit" class="btn">Criar postagem</button>
   </form>
 </section>
